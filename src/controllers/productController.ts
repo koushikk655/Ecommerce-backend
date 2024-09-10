@@ -2,8 +2,8 @@ import { Request, Response } from 'express';
 import Product from '../models/Product';
 
 export const createProduct = async (req: Request, res: Response) => {
-  const { title, description, price } = req.body;
-  const image = req.file?.filename;
+  const { title, description, price, image } = req.body;
+
   const newProduct = new Product({ title, description, price, image });
   await newProduct.save();
   

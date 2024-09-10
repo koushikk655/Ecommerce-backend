@@ -41,6 +41,7 @@ export const reviewCart = async (req: Request, res: Response) => {
                 description: item.product.description,
                 price: item.product.price,
                 quantity: item.quantity,
+                image:item.product.image
             })),
             address: cart.address
         });
